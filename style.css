@@ -4,6 +4,9 @@ padding:0;
 box-sizing:border-box;
 font-family:Arial, sans-serif;
 }
+body{
+background:red;
+}
 
 body{
 background:#f2f2f2;
@@ -110,3 +113,4 @@ gap:60px;
 }
 
 }
+
