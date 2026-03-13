@@ -52,13 +52,15 @@ section {
   margin-top: 30px;
 }
 
-.team-member {
-  background: white;
-  padding: 20px;
-  width: 220px;
-  border-radius: 15px;
-  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
-  transition: transform 0.3s, box-shadow 0.3s;
+.team-member{
+  background:white;
+  padding:20px;
+  border-radius:15px;
+  text-align:center;
+  box-shadow:0 8px 15px rgba(0,0,0,0.2);
+  transition:0.3s;
+
+  margin-bottom:30px; /* Hapesire vertikale midis diveve */
 }
 
 .team-member:hover {
@@ -66,11 +68,11 @@ section {
   box-shadow: 0 12px 20px rgba(0,0,0,0.3);
 }
 
-.team-member img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
+.team-wrapper{
+  display:flex;
+  justify-content:space-between;
+  gap:80px; /* hapesire midis vajzave dhe djemve */
+  margin-top:40px;
 }
 
 .gallery {
@@ -106,4 +108,5 @@ section {
 
 .contact-us button:hover {
   background-color: #0077cc;
+
 }
