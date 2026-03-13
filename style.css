@@ -1,154 +1,58 @@
-/* Reset bazik */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+body{
+background:red;
 }
 
-/* Body dhe background */
-body {
-    background-color: #ffffff; /* Pjesa e përmbajtjes e bardhë */
-    color: #333;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+body{
+background:#f2f2f2;
 }
 
-/* Header dhe Navbar */
-header {
-    width: 100%;
-    background-color: #5dade2; /* blu qielli */
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+/* MENU */
+
+.navbar{
+background:#0b5fa5;
+padding:15px 0;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
+.navbar ul{
+list-style:none;
+display:flex;
+justify-content:center;
+gap:40px;
 }
 
-nav h2 {
-    font-size: 1.8rem;
-    color: #fff;
+.navbar a{
+text-decoration:none;
+color:white;
+font-weight:bold;
+font-size:16px;
+@@ -89,24 +92,25 @@
+border-radius:50%;
+object-fit:cover;
+margin-bottom:10px;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
+.team-member h4{
+margin:10px 0 5px;
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 1rem;
-    transition: color 0.3s, transform 0.3s;
+.team-member p{
+color:#555;
 }
 
-nav ul li a:hover {
-    color: #d6eaf8;
-    transform: scale(1.05);
+/* RESPONSIVE (PER TELEFON) */
+
+@media (max-width:768px){
+
+.team-wrapper{
+flex-direction:column;
+align-items:center;
+gap:60px;
 }
 
-/* Menu mobile responsive */
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.menu-toggle div {
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    margin: 4px 0;
-    transition: 0.3s;
-}
-
-/* Div-et e ekipit */
-.team-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-    padding: 140px 20px 60px 20px; /* offset per header */
-    background-color: #ffffff;
-}
-
-.team-container .team-member {
-    background-color: #f8f9f9;
-    border-radius: 12px;
-    padding: 1.5rem;
-    width: 220px;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.team-container .team-member:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-}
-
-.team-container .team-member img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 1rem;
-}
-
-.team-container .team-member h3 {
-    margin-bottom: 0.3rem;
-    font-size: 1.1rem;
-    color: #333;
-}
-
-.team-container .team-member p {
-    font-size: 0.9rem;
-    color: #555;
-}
-
-/* Footer */
-footer {
-    background-color: #5dade2;
-    text-align: center;
-    padding: 1.5rem 0;
-    color: #fff;
-    margin-top: auto;
-    font-size: 0.9rem;
-}
-
-/* Media Queries për mobile */
-@media screen and (max-width: 768px) {
-    nav ul {
-        display: none;
-        flex-direction: column;
-        background-color: #5dade2;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 200px;
-        padding: 1rem;
-        border-radius: 8px;
-    }
-
-    nav ul.show {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: flex;
-    }
-
-    .team-container {
-        flex-direction: column;
-        align-items: center;
-    }
 }
