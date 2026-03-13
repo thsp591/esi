@@ -4,18 +4,19 @@ padding:0;
 box-sizing:border-box;
 font-family:Arial, sans-serif;
 }
-body{
-background:red;
-}
+
+/* BACKGROUND I FAQES */
 
 body{
-background:#f2f2f2;
+background:linear-gradient(135deg,#0b5fa5,#0a2a66);
+min-height:100vh;
+color:white;
 }
 
 /* MENU */
 
 .navbar{
-background:#0b5fa5;
+background:#083d77;
 padding:15px 0;
 }
 
@@ -30,11 +31,11 @@ gap:40px;
 text-decoration:none;
 color:white;
 font-weight:bold;
-font-size:16px;
+font-size:17px;
 }
 
 .navbar a:hover{
-text-decoration:underline;
+color:#ffd166;
 }
 
 /* ABOUT US */
@@ -48,7 +49,7 @@ padding:60px 20px;
 margin-bottom:40px;
 }
 
-/* TEAM WRAPPER */
+/* TEAM */
 
 .team-wrapper{
 display:flex;
@@ -58,7 +59,7 @@ margin:auto;
 max-width:900px;
 }
 
-/* GIRLS & BOYS COLUMNS */
+/* KOLONAT */
 
 .girls, .boys{
 display:flex;
@@ -67,24 +68,23 @@ align-items:center;
 gap:30px;
 }
 
-.girls h3, .boys h3{
-margin-bottom:10px;
-}
-
-/* TEAM MEMBER CARD */
+/* DIVET */
 
 .team-member{
 width:260px;
 padding:40px 20px;
 background:white;
 border-radius:20px;
-box-shadow:0 10px 25px rgba(0,0,0,0.15);
+color:black;
+box-shadow:0 10px 25px rgba(0,0,0,0.25);
 transition:0.3s;
 }
 
 .team-member:hover{
-transform:translateY(-8px);
+transform:translateY(-10px);
 }
+
+/* FOTO */
 
 .team-member img{
 width:100px;
@@ -102,7 +102,7 @@ margin:10px 0 5px;
 color:#555;
 }
 
-/* RESPONSIVE (PER TELEFON) */
+/* TELEFON */
 
 @media (max-width:768px){
 
@@ -113,4 +113,3 @@ gap:60px;
 }
 
 }
-
