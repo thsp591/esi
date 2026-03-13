@@ -1,58 +1,109 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, sans-serif;
-}
-body{
-background:red;
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+  color: #333;
 }
 
-body{
-background:#f2f2f2;
+header {
+  background-color: #005fa3;
+  padding: 15px 0;
 }
 
-/* MENU */
-
-.navbar{
-background:#0b5fa5;
-padding:15px 0;
+.menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
 }
 
-.navbar ul{
-list-style:none;
-display:flex;
-justify-content:center;
-gap:40px;
+.menu li {
+  margin: 0 20px;
 }
 
-.navbar a{
-text-decoration:none;
-color:white;
-font-weight:bold;
-font-size:16px;
-@@ -89,24 +92,25 @@
-border-radius:50%;
-object-fit:cover;
-margin-bottom:10px;
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
 }
 
-.team-member h4{
-margin:10px 0 5px;
+.menu a:hover {
+  color: #00aaff;
 }
 
-.team-member p{
-color:#555;
+section {
+  padding: 60px 20px;
+  text-align: center;
 }
 
-/* RESPONSIVE (PER TELEFON) */
-
-@media (max-width:768px){
-
-.team-wrapper{
-flex-direction:column;
-align-items:center;
-gap:60px;
+.home {
+  background: linear-gradient(120deg, #3a3d98, #00aaff);
+  color: white;
 }
 
+.about-us .team-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.team-member {
+  background: white;
+  padding: 20px;
+  width: 220px;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.3);
+}
+
+.team-member img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.gallery img {
+  width: 250px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+.contact-us button {
+  padding: 15px 25px;
+  font-size: 16px;
+  background-color: #00aaff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-us button:hover {
+  background-color: #0077cc;
 }
