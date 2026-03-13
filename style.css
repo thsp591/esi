@@ -6,12 +6,12 @@ body {
   background: linear-gradient(to bottom, #87CEEB 0%, #ffffff 100%);
   color: #333;
   display: flex;
-  justify-content: center; /* qendër horizontale për container-in */
-  align-items: center;    /* qendër vertikale e të gjithë faqes */
+  justify-content: center; /* qendër horizontalisht për grid-in */
+  align-items: center;    /* qendër vertikalisht */
   min-height: 100vh;
 }
 
-/* ==================== HEADER ==================== */
+/* ==================== HEADER & MENU ==================== */
 header {
   position: absolute;
   top: 0;
@@ -47,23 +47,30 @@ header {
   color: #00aaff;
 }
 
-/* ==================== TEAM / 3D CARDS HORIZONTAL ==================== */
-.about-us .team-container {
+/* ==================== TEAM GRID ==================== */
+.team-grid {
   display: flex;
-  flex-direction: row; /* horizontal */
-  justify-content: center; /* qendër horizontalisht */
-  align-items: center; /* qendër vertikalisht */
-  gap: 60px; /* hapësira midis div-eve */
+  justify-content: space-between; /* Gocat majtas, Cunat djathtas */
+  width: 80%;
   perspective: 1200px;
 }
 
+/* ==================== GROUPS ==================== */
+.team-group {
+  display: flex;
+  flex-direction: column; /* njera poshte tjetrës */
+  gap: 30px;
+  align-items: center;
+}
+
+/* ==================== TEAM MEMBERS ==================== */
 .team-member {
   display: flex;
   flex-direction: column; /* foto mbi tekst */
   align-items: center;
   background: #ffffff;
-  padding: 30px 25px;
-  width: 220px;
+  padding: 20px 15px;
+  width: 200px;
   border-radius: 20px;
   box-shadow: 0 12px 25px rgba(0,0,0,0.3);
   transition: transform 0.5s, box-shadow 0.5s;
@@ -82,19 +89,67 @@ header {
   object-fit: cover;
   border: 5px solid #00aaff;
   box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .team-member h3 {
-  font-size: 20px;
+  font-size: 18px;
   color: #005fa3;
   margin: 0;
+  text-align: center;
+}
+
+/* ==================== GALLERY ==================== */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.gallery img {
+  width: 250px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.gallery img:hover {
+  transform: scale(1.08) rotateZ(2deg);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.35);
+}
+
+/* ==================== CONTACT ==================== */
+.contact-us button {
+  padding: 15px 25px;
+  font-size: 16px;
+  background-color: #00aaff;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-us button:hover {
+  background-color: #0077cc;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
 }
 
 /* ==================== RESPONSIVE ==================== */
-@media (max-width: 600px) {
-  .about-us .team-container {
-    flex-direction: column; /* në celular kalon vertikalisht */
+@media (max-width: 900px) {
+  .team-grid {
     gap: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .team-grid {
+    flex-direction: column; /* grupet njëra poshtë tjetrës */
+    align-items: center;
+    gap: 50px;
   }
 }
